@@ -1,0 +1,17 @@
+using System.Collections;
+using UnityEngine;
+
+public class collision : MonoBehaviour
+    
+{
+    public Movement movement;
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (collisionInfo.gameObject.name == "Obstacle(Clone)")
+        {
+            //Debug.Log(collisionInfo.gameObject.name);
+            movement.enabled = false;
+        }
+        
+    }
+}
